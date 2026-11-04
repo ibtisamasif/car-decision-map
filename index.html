@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <script>
+    try {
+      document.querySelector('meta[name="color-scheme"]').content = localStorage.getItem("color-scheme") ?? "light dark";
+    } catch (e) {}
+  </script>
+  <title>Car Decision Map + EMI (with Electric Current Car)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400..800;1,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="top-banner">
+    Local Edition · <strong>Your current car now supports both Petrol &amp; Electric (EV)</strong> · Instant offline calculations
+  </div>
+
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="brand">
+        <span>Car Decision Map</span>
+        <span class="brand-badge">EV + Petrol Edition</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:0.5rem;">
+        <button type="button" class="btn" data-action="toggle-theme" title="Toggle light/dark theme">
+          Theme
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="pill-badge">
+        <span>Car Decision Map + EMI</span>
+        <span class="muted">·</span>
+        <span class="muted">Local Interactive Edition</span>
+      </div>
+      <h1>
+        Which car should I buy? <span class="accent">What does it really cost you?</span>
+      </h1>
+      <p>
+        Not the price. Not the EMI. Fuel, depreciation, and what your money could have earned if invested, in one clear number a month.
+      </p>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <div class="toolbar">
+      <div class="toolbar-status">
+        <span class="status-dot"></span>
+        <span>Auto-saved locally in your browser · Current car supports <b>Petrol &amp; Electric</b></span>
+      </div>
+      <div class="toolbar-actions">
+        <button type="button" class="btn" data-action="load-prompt-example">
+          Load 5-Car Preset (Oshan / Chery / BYD / Leaf / Alsvin)
+        </button>
+        <button type="button" class="btn btn-danger" data-action="reset-default">
+          Reset to Defaults
+        </button>
+      </div>
+    </div>
+
+    <div id="inputs-root" style="display:flex; flex-direction:column; gap:1.25rem;"></div>
+    <div id="results-root" style="display:flex; flex-direction:column; gap:1.25rem;"></div>
+
+    <p class="helper-note" style="padding-inline:0.25rem;">
+      For education only. This is not advice to buy or sell any car or investment. Results depend on the numbers you put in, and real prices, repair costs and resale values will differ. Amounts are in rupees as you'd pay them, not adjusted for inflation.
+    </p>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
+
