@@ -21,6 +21,5 @@ Or
 
 ## Run Directly
 
-```bash
-https://www.ibtisamasif.com/car-decision-map/
-```
+[https://www.ibtisamasif.com/car-decision-map/](https://www.ibtisamasif.com/car-decision-map/)
+
