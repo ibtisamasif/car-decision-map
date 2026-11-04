@@ -16,3 +16,11 @@ python3 -m http.server 8080
 ```
 
 Then open [http://localhost:8080](http://localhost:8080) in your browser.
+
+Or
+
+## Run Directly
+
+```bash
+https://www.ibtisamasif.com/car-decision-map/
+```
