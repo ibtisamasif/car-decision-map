@@ -4,7 +4,7 @@ A local, offline-capable web calculator for comparing the true monthly and multi
 
 ## Features
 - **Current Car EV & Petrol Toggle**: Switch your existing car between **Petrol** (`km per litre`) and **Electric** (`km per unit / kWh`), using either home electricity or solar net-metering rates.
-- **Compare up to 4 Candidate Cars**: Mix and match Petrol and Electric options with **Cash** or **EMI** financing.
+- **Compare up to 6 Candidate Cars**: Mix and match Petrol and Electric options (`Car A` through `Car F`, plus your current car) with **Cash** or **EMI** financing.
 - **Full 5-Year & Monthly Breakdown**: Includes fuel/charging costs (with optional annual inflation), resale depreciation, opportunity cost of capital tied up in the car (and monthly compounding on EMI instalments), bank markup above price, and annual upkeep.
 - **Interactive Distance Crossover Chart**: Visualizes total ownership cost from `0` to `1,000 km/day` and highlights the exact daily mileage where the cheapest car choice switches.
 

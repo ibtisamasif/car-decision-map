@@ -5,14 +5,18 @@ const ACCENTS = {
   A: { stroke: "#f59e0b", dotClass: "dot-A", cardClass: "accent-A" },
   B: { stroke: "#0d9488", dotClass: "dot-B", cardClass: "accent-B" },
   C: { stroke: "#a855f7", dotClass: "dot-C", cardClass: "accent-C" },
-  D: { stroke: "#f43f5e", dotClass: "dot-D", cardClass: "accent-D" }
+  D: { stroke: "#f43f5e", dotClass: "dot-D", cardClass: "accent-D" },
+  E: { stroke: "#06b6d4", dotClass: "dot-E", cardClass: "accent-E" },
+  F: { stroke: "#6366f1", dotClass: "dot-F", cardClass: "accent-F" }
 };
 
 const CAR_TEMPLATES = {
   A: { fuel: "pet", price: "47,70,000", eff: "15", keep: "75", mnt: "60,000" },
   B: { fuel: "ev", price: "72,90,000", eff: "6.5", keep: "50", mnt: "30,000" },
   C: { fuel: "pet", price: "50,00,000", eff: "15", keep: "75", mnt: "60,000" },
-  D: { fuel: "pet", price: "50,00,000", eff: "15", keep: "75", mnt: "60,000" }
+  D: { fuel: "pet", price: "50,00,000", eff: "15", keep: "75", mnt: "60,000" },
+  E: { fuel: "ev", price: "55,00,000", eff: "6.5", keep: "75", mnt: "30,000" },
+  F: { fuel: "pet", price: "45,00,000", eff: "14", keep: "80", mnt: "50,000" }
 };
 
 const PROMPT_EXAMPLE_STATE = {
@@ -769,7 +773,7 @@ function renderCurrentCarCard() {
 }
 
 function renderCandidateCarCard(car, index, totalCarsCount) {
-  const rankLabel = ["1st", "2nd", "3rd", "4th"][index] || `${index + 1}th`;
+  const rankLabel = ["1st", "2nd", "3rd", "4th", "5th", "6th"][index] || `${index + 1}th`;
   const priceVal = parseNum(car.price);
   const keepRatio = parseNum(car.keep) / 100;
   const mntVal = parseNum(car.mnt);
@@ -1072,12 +1076,12 @@ function renderFormsSection() {
         ${isSwap ? renderCurrentCarCard() : ""}
         ${state.cars.map((c, idx) => renderCandidateCarCard(c, idx, state.cars.length)).join("")}
         ${
-          state.cars.length < 4
+          state.cars.length < 6
             ? `
           <button type="button" class="add-car-btn" data-action="add-car">
             <div class="add-car-icon">+</div>
             <span style="font-size:0.9rem; font-weight:700;">Add a car</span>
-            <span style="font-size:0.75rem; color:var(--muted-fg);">Compare up to 4 · ${4 - state.cars.length} more left</span>
+            <span style="font-size:0.75rem; color:var(--muted-fg);">Compare up to 6 choices · ${6 - state.cars.length} more left</span>
           </button>
         `
             : ""
@@ -1929,9 +1933,9 @@ document.addEventListener("click", (e) => {
       renderAll();
     }
   } else if (action === "add-car") {
-    if (state.cars.length >= 4) return;
+    if (state.cars.length >= 6) return;
     const usedIds = state.cars.map((c) => c.id);
-    const nextId = ["A", "B", "C", "D"].find((id) => !usedIds.includes(id));
+    const nextId = ["A", "B", "C", "D", "E", "F"].find((id) => !usedIds.includes(id));
     if (!nextId) return;
     const tpl = CAR_TEMPLATES[nextId] || CAR_TEMPLATES.C;
     state.cars.push({

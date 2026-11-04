@@ -27,6 +27,8 @@
   --teal: #0d9488;
   --purple: #a855f7;
   --rose: #f43f5e;
+  --cyan: #06b6d4;
+  --indigo: #6366f1;
 }
 
 *,
@@ -337,6 +339,8 @@ input:focus-visible,
 .car-card.accent-B { border-block-start-color: var(--teal); }
 .car-card.accent-C { border-block-start-color: var(--purple); }
 .car-card.accent-D { border-block-start-color: var(--rose); }
+.car-card.accent-E { border-block-start-color: var(--cyan); }
+.car-card.accent-F { border-block-start-color: var(--indigo); }
 
 .dot {
   display: inline-block;
@@ -351,6 +355,8 @@ input:focus-visible,
 .dot-B { background-color: var(--teal); }
 .dot-C { background-color: var(--purple); }
 .dot-D { background-color: var(--rose); }
+.dot-E { background-color: var(--cyan); }
+.dot-F { background-color: var(--indigo); }
 
 .card-header {
   display: flex;
@@ -707,6 +713,8 @@ input:focus-visible,
 .running-card.accent-B { border-inline-start-color: var(--teal); }
 .running-card.accent-C { border-inline-start-color: var(--purple); }
 .running-card.accent-D { border-inline-start-color: var(--rose); }
+.running-card.accent-E { border-inline-start-color: var(--cyan); }
+.running-card.accent-F { border-inline-start-color: var(--indigo); }
 
 .running-big {
   font-size: 1.55rem;
@@ -745,6 +753,8 @@ input:focus-visible,
 .comparison-card.accent-B { border-inline-start-color: var(--teal); }
 .comparison-card.accent-C { border-inline-start-color: var(--purple); }
 .comparison-card.accent-D { border-inline-start-color: var(--rose); }
+.comparison-card.accent-E { border-inline-start-color: var(--cyan); }
+.comparison-card.accent-F { border-inline-start-color: var(--indigo); }
 
 .comparison-header {
   width: 100%;
