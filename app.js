@@ -2014,14 +2014,14 @@ document.addEventListener("click", (e) => {
     const stored = localStorage.getItem("color-scheme");
     const sysDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const sysScheme = sysDark ? "dark" : "light";
-    const currentRendered = stored === "dark" || stored === "light" ? stored : sysScheme;
+    const currentRendered = stored === "dark" || stored === "light" ? stored : "dark";
     const target = currentRendered === "dark" ? "light" : "dark";
-    if (target !== sysScheme) {
+    if (target !== "dark") {
       localStorage.setItem("color-scheme", target);
       meta.content = target;
     } else {
       localStorage.removeItem("color-scheme");
-      meta.content = "light dark";
+      meta.content = "dark";
     }
   }
 });
@@ -2030,7 +2030,7 @@ document.addEventListener("click", (e) => {
 window.addEventListener("storage", (e) => {
   if (e.key === "color-scheme") {
     const meta = document.querySelector('meta[name="color-scheme"]');
-    if (meta) meta.content = e.newValue ?? "light dark";
+    if (meta) meta.content = e.newValue ?? "dark";
   }
 });
 
