@@ -1,4 +1,4 @@
-# Car Decision Map + EMI (Electric & Petrol Edition)
+# My Car Decision Map + EMI (Electric & Petrol Edition)
 
 A local, offline-capable web calculator for comparing the true monthly and multi-year cost of owning a car in Pakistan (Fuel/Electricity, Depreciation, Upkeep, EMI, and Opportunity Cost), upgraded so **Your current car** supports both **Petrol** and **Electric (EV)** vehicles.
 
