@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   &:has(> head > meta[name="color-scheme"][content="dark"]) {
     color-scheme: dark;
